@@ -4,6 +4,8 @@
 
 可以通过DialogViewConvertListener接口,方便得控制UI
 
+``` java
+//简单操作如下
  NiceDialog.init().setLayoutId(R.layout.layout_my_dialog)
                         .setConvertListener(new DialogViewConvertListener() {
                             @Override
@@ -13,9 +15,11 @@
                                 Random random = new Random();
                                 viewHolder.setText(R.id.btn_ok,random.nextInt(100)+"");
                             }
-                        }).setDimAmount(0.3f)
-                        .setWidth(400)
-                        .setHeight(200)
+                        }).setDimAmount(0.3f)  //设置灰度
+                         .setWidth(400)  
+                         .setHeight(200)
                         .setOutCancel(true)
                         .setAnimStyle(R.style.DialogFragmentEnterExitAnimation)
                         .show(getSupportFragmentManager(), "test");
+                        
+``` 
