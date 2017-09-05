@@ -34,21 +34,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btn_show_dialog:
                 NiceDialog.init().setLayoutId(R.layout.layout_my_dialog)
-                        .setConvertListener(new DialogViewConvertListener() {
-                            @Override
-                            public void convertView(DialogViewHolder viewHolder, BaseNiceDialog
-                                    dialog) {
-                                //在这里进行View相关的操作
-                                Random random = new Random();
-                                viewHolder.setText(R.id.btn_ok,random.nextInt(100)+"");
-                            }
-                        }).setDimAmount(0.3f)
+                        .setConvertListener(listener).setDimAmount(0.3f)
                         .setWidth(400)
-                        .setHeight(200)
+                        .setHeight(300)
                         .setOutCancel(true)
                         .setAnimStyle(R.style.DialogFragmentEnterExitAnimation)
                         .show(getSupportFragmentManager(), "test");
                 break;
         }
     }
+
+    private static DialogViewConvertListener listener = new DialogViewConvertListener() {
+        @Override
+        public void convertView(DialogViewHolder viewHolder, BaseNiceDialog dialog) {
+            //在这里进行View相关的操作
+            Random random = new Random();
+            viewHolder.setText(R.id.btn_ok, random.nextInt(100) + "");
+        }
+    };
 }
