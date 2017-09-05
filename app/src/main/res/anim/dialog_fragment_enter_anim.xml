@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+     android:duration="200">
+
+    <!--dialogfragment 的进入动画-->
+
+    <!--透明 0-1-->
+    <alpha
+        android:fromAlpha="0"
+        android:toAlpha="1"/>
+
+    <!--移动效果-->
+    <translate
+        android:fromYDelta="100%p"
+        android:toYDelta="0%p"/>
+
+
+</set>

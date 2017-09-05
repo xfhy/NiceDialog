@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--DialogFragment 的主题-->
+    <style name="NiceDialog" parent="@android:style/Theme.Dialog">
+        <!--无标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--背景-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--缓存渲染视图-->
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <!--输入模式-->
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <!--是否悬浮-->
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="DialogFragmentEnterExitAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_fragment_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/dialog_fragment_exit_anim</item>
+    </style>
+
+</resources>
